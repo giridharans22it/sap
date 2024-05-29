@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Points Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body class="bg-info">
+    <div class="container">
+        <h2 class="mt-5 mb-4">Activity Points Calculator</h2>
+        <form method="POST" action="http://localhost:3000" enctype="multipart/form-data">
+            <!-- Select SAP type -->
+            <div class="form-group">
+                <label class="form-group" for="rollno">Roll Number:</label><br> <!-- New input field for roll number -->
+                <input  class="form-control" type="text" id="rollno" name="rollno"><br>
+                <label for="sapType">Select SAP Type:</label>
+                <select class="form-control" id="sapType" name="sap_type">
+                    <option value="Select">Select</option>
+                   <option value="Paper">Paper Presentation</option>
+                    <option value="Project">Project Presentation</option>
+                    <option value="TechnoManagerial">Technomanagerial Event</option>
+                    <option value="Sports">Sports and Games</option>
+                    <option value="Membership">Membership</option>
+                    <option value="Leadership">Leadership/Organizing Events</option>
+                    <option value="Courses">Value Added Courses/Online Courses</option>
+                    <option value="ProjectToPaper">Project to Paper/Patent/Copyright</option>
+                    <option value="Exams">GATE/CAT/Govt Exams</option>
+                    <option value="Placement">Placement and Internship</option>
+                    <option value="Entrepreneurship">Entrepreneurship</option>
+                    <option value="SocialActivities">Social Activities</option>
+                </select>
+            </div>
+            
+            <!-- Radio buttons for selected SAP type -->
+            <div id="eventOptions"></div>
+            
+<!-- Institution Name -->
+
+</div>
+<div class="form-group" id="institutionNameSection">
+<label for="institutionName">Institution Name:</label><br />
+<select class="form-control">
+  <option value="">Select a College</option>
+  <option
+    value="A K T Memorial College of Engineering and Technology"
+  >
+    A K T Memorial College of Engineering and Technology
+  </option>
+  <option value="A R College of Engineering and Technology">
+    A R College of Engineering and Technology
+  </option>
+  <option value="A R Engineering College">
+    A R Engineering College
+  </option>
+  <option value="A R J College of Engineering and Technology">
+    A R J College of Engineering and Technology
+  </option>
+  <option value="A V C College of Engineering">
+    A V C College of Engineering
+  </option>
+  <option value="A V S Engineering College">
+    A V S Engineering College
+  </option>
+  <option value="AAA College of Engineering and Technology">
+    AAA College of Engineering and Technology
+  </option>
+  <option value="Aalim Muhammed Salegh Academy of Architecture">
+    Aalim Muhammed Salegh Academy of Architecture
+  </option>
+  <option value="Aalim Muhammed Salegh College of Engineering">
+    Aalim Muhammed Salegh College of Engineering
+  </option>
+  <option value="Adhi College of Engineering and Technology">
+    Adhi College of Engineering and Technology
+  </option>
+  <option value="Adhiparasakthi College of Engineering">
+    Adhiparasakthi College of Engineering
+  </option>
+  <option value="Adhiparasakthi Engineering College">
+    Adhiparasakthi Engineering College
+  </option>
+  <option value="Adhiyamaan College of Engineering (Autonomous)">
+    Adhiyamaan College of Engineering (Autonomous)
+  </option>
+  <option value="Adithya Institute of Technology">
+    Adithya Institute of Technology
+  </option>
+  <option value="Agni College of Technology">
+    Agni College of Technology
+  </option>
+  <option value="Aishwarya College of Engineering and Technology">
+    Aishwarya College of Engineering and Technology
+  </option>
+  <option value="Akshaya College of Engineering and Technology">
+    Akshaya College of Engineering and Technology
+  </option>
+  <option
+    value="Alagappa Chettiar Government College of Engineering and Technology (Autonomous)"
+  >
+    Alagappa Chettiar Government College of Engineering and Technology
+    (Autonomous)
+  </option>
+  <option value="Al-Ameen Engineering College (Autonomous)">
+    Al-Ameen Engineering College (Autonomous)
+  </option>
+  <option value="Alpha College of Engineering">
+    Alpha College of Engineering
+  </option>
+  <option value="AMRITA College of Engineering and Technology">
+    AMRITA College of Engineering and Technology
+  </option>
+  <option value="Anand Institute of Higher Technology">
+    Anand Institute of Higher Technology
+  </option>
+  <option value="Anand School of Architecture">
+    Anand School of Architecture
+  </option>
+
+  <option value="Angel College of Engineering and Technology">
+    Angel College of Engineering and Technology
+  </option>
+  <option value="Anjalai Ammal-Mahalingam Engineering College">
+    Anjalai Ammal-Mahalingam Engineering College
+  </option>
+  <option value="Anna University Regional Campus - Coimbatore">
+    Anna University Regional Campus - Coimbatore
+  </option>
+  <option value="Anna University Regional Campus - Madurai">
+    Anna University Regional Campus - Madurai
+  </option>
+  <option value="Anna University Regional Campus - Tirunelveli">
+    Anna University Regional Campus - Tirunelveli
+  </option>
+  <option value="Annai College of Engineering and Technology">
+    Annai College of Engineering and Technology
+  </option>
+  <option value="Annai Mathammal Sheela Engineering College">
+    Annai Mathammal Sheela Engineering College
+  </option>
+  <option value="Annai Mira College of Engineering and Technology">
+    Annai Mira College of Engineering and Technology
+  </option>
+  <option value="Annai Terasa College of Engineering">
+    Annai Terasa College of Engineering
+  </option>
+  <option value="Annai Vailankanni College of Engineering">
+    Annai Vailankanni College of Engineering
+  </option>
+  <option value="Annai Veilankannis College of Engineering">
+    Annai Veilankannis College of Engineering
+  </option>
+  <option
+    value="Annamalai University Faculty of Engineering and Technology"
+  >
+    Annamalai University Faculty of Engineering and Technology
+  </option>
+  <option value="Annamalaiar College of Engineering">
+    Annamalaiar College of Engineering
+  </option>
+  <option value="Annapoorana Engineering College">
+    Annapoorana Engineering College
+  </option>
+  <option value="Apollo Engineering College">
+    Apollo Engineering College
+  </option>
+  <option value="Arasu Engineering College">
+    Arasu Engineering College
+  </option>
+  <option value="Arifa Institute of Technology">
+    Arifa Institute of Technology
+  </option>
+  <option value="Ariyalur Engineering College">
+    Ariyalur Engineering College
+  </option>
+  <option value="Arjun College of Technology">
+    Arjun College of Technology
+  </option>
+  <option value="Arulmigu Meenakshi Amman College of Engineering">
+    Arulmigu Meenakshi Amman College of Engineering
+  </option>
+  <option value="Arulmurugan College of Engineering">
+    Arulmurugan College of Engineering
+  </option>
+  <option value="Arunachala College of Engineering for Women">
+    Arunachala College of Engineering for Women
+  </option>
+  <option value="Arunai Engineering College">
+    Arunai Engineering College
+  </option>
+  <option value="Asan Memorial College of Engineering and Technology">
+    Asan Memorial College of Engineering and Technology
+  </option>
+  <option value="Asian College of Engineering and Technology">
+    Asian College of Engineering and Technology
+  </option>
+  <option value="As-Salam College of Engineering and Technology">
+    As-Salam College of Engineering and Technology
+  </option>
+
+  <option value="AVS College of Technology">
+    AVS College of Technology
+  </option>
+  <option value="Bannari Amman Institute of Technology (Autonomous)">
+    Bannari Amman Institute of Technology (Autonomous)
+  </option>
+  <option value="Bethlahem Institute of Engineering">
+    Bethlahem Institute of Engineering
+  </option>
+  <option value="Bharath Niketan Engineering College">
+    Bharath Niketan Engineering College
+  </option>
+  <option value="Bharathidasan Engineering College">
+    Bharathidasan Engineering College
+  </option>
+  <option value="Bharathiyar Institute of Engineering for Women">
+    Bharathiyar Institute of Engineering for Women
+  </option>
+  <option value="Builders engineering college">
+    Builders engineering college
+  </option>
+  <option
+    value="C Abdul Hakeem College of Engineering and Technology"
+  >
+    C Abdul Hakeem College of Engineering and Technology
+  </option>
+  <option value="C K College of Engineering and Technology">
+    C K College of Engineering and Technology
+  </option>
+  <option value="C M S College of Engineering and Technology">
+    C M S College of Engineering and Technology
+  </option>
+  <option value="C M S College of Engineering">
+    C M S College of Engineering
+  </option>
+  <option value="C S I College of Engineering">
+    C S I College of Engineering
+  </option>
+  <option value="C S I Institute of Technology">
+    C S I Institute of Technology
+  </option>
+  <option value="C.A.R.E School of Architecture, Engineering">
+    C.A.R.E School of Architecture, Engineering
+  </option>
+  <option value="CAAD - Chennai Academy of Architecture and Design">
+    CAAD - Chennai Academy of Architecture and Design
+  </option>
+  <option value="CAPE Institute of Technology">
+    CAPE Institute of Technology
+  </option>
+  <option value="CARE College of Engineering">
+    CARE College of Engineering
+  </option>
+  <option value="Central Electrochemical Research Institute (CECRI)">
+    Central Electrochemical Research Institute (CECRI)
+  </option>
+  <option
+    value="Central Institute of Plastics Engineering and Technology (CIPET)"
+  >
+    Central Institute of Plastics Engineering and Technology (CIPET)
+  </option>
+  <option value="Chendu College of Engineering & Technology">
+    Chendu College of Engineering & Technology
+  </option>
+  <option value="CHENDURAN COLLEGE OF ENGINEERING & TECHNOLOGY">
+    CHENDURAN COLLEGE OF ENGINEERING & TECHNOLOGY
+  </option>
+  <option value="Chennai Institute of Technology">
+    Chennai Institute of Technology
+  </option>
+  <option value="Cheran College of Engineering">
+    Cheran College of Engineering
+  </option>
+  <option value="Chettinad College of Engineering and Technology">
+    Chettinad College of Engineering and Technology
+  </option>
+  <option value="Christ the King Engineering College">
+    Christ the King Engineering College
+  </option>
+  <option value="Christian College of Engineering and Technology">
+    Christian College of Engineering and Technology
+  </option>
+
+  <option
+    value="Coimbatore Institute of Engineering and Technology (Autonomous)"
+  >
+    Coimbatore Institute of Engineering and Technology (Autonomous)
+  </option>
+  <option value="Coimbatore Institute of Technology (Autonomous)">
+    Coimbatore Institute of Technology (Autonomous)
+  </option>
+  <option value="D M I College of Engineering">
+    D M I College of Engineering
+  </option>
+  <option value="D M I Engineering College">
+    D M I Engineering College
+  </option>
+  <option value="Davinci School of Design and Architecture">
+    Davinci School of Design and Architecture
+  </option>
+  <option value="Dhaanish Ahmed College of Engineering">
+    Dhaanish Ahmed College of Engineering
+  </option>
+  <option value="Dhaanish Ahmed Institute of Technology">
+    Dhaanish Ahmed Institute of Technology
+  </option>
+  <option value="Dhanalakshmi College of Engineering">
+    Dhanalakshmi College of Engineering
+  </option>
+  <option
+    value="Dhanalakshmi Srinivasan College of Engineering and Technology"
+  >
+    Dhanalakshmi Srinivasan College of Engineering and Technology
+  </option>
+  <option value="Dhanalakshmi Srinivasan College of Engineering">
+    Dhanalakshmi Srinivasan College of Engineering
+  </option>
+  <option
+    value="Dhanalakshmi Srinivasan Engineering College (Autonomous)"
+  >
+    Dhanalakshmi Srinivasan Engineering College (Autonomous)
+  </option>
+  <option value="Dhirajlal Gandhi College of Technology">
+    Dhirajlal Gandhi College of Technology
+  </option>
+  <option value="Dr. G U Pope College of Engineering">
+    Dr. G U Pope College of Engineering
+  </option>
+  <option
+    value="Dr. Mahalingam College of Engineering and Technology (Autonomous)"
+  >
+    Dr. Mahalingam College of Engineering and Technology (Autonomous)
+  </option>
+  <option value="Dr. N G P Institute of Technology">
+    Dr. N G P Institute of Technology
+  </option>
+  <option value="Dr. Nagarathinams College of Engineering">
+    Dr. Nagarathinams College of Engineering
+  </option>
+  <option value="Dr. Navalar Nedunchezhian College of Engineering">
+    Dr. Navalar Nedunchezhian College of Engineering
+  </option>
+  <option value="Dr. Sivanthi Aditanar College of Engineering">
+    Dr. Sivanthi Aditanar College of Engineering
+  </option>
+  <option value="E G S Pillay Engineering College (Autonomous)">
+    E G S Pillay Engineering College (Autonomous)
+  </option>
+  <option value="EASA College of Engineering and Technology">
+    EASA College of Engineering and Technology
+  </option>
+  <option value="Easwari Engineering College (Autonomous)">
+    Easwari Engineering College (Autonomous)
+  </option>
+  <option value="Einstein College of Engineering">
+    Einstein College of Engineering
+  </option>
+  <option value="Er. Perumal Manimekalai College of Engineering">
+    Er. Perumal Manimekalai College of Engineering
+  </option>
+  <option value="Erode Sengunthar Engineering College (Autonomous)">
+    Erode Sengunthar Engineering College (Autonomous)
+  </option>
+  <option value="Excel Engineering College (Autonomous)">
+    Excel Engineering College (Autonomous)
+  </option>
+  <option value="Fatima Michael College of Engineering & Technology">
+    Fatima Michael College of Engineering & Technology
+  </option>
+
+  <option value="Francis Xavier Engineering College (Autonomous)">
+    Francis Xavier Engineering College (Autonomous)
+  </option>
+  <option value="G K M College of Engineering and Technology">
+    G K M College of Engineering and Technology
+  </option>
+  <option value="Ganadipathy Tulsi’s Jain Engineering College">
+    Ganadipathy Tulsi’s Jain Engineering College
+  </option>
+  <option
+    value="Ganapathy Chettiar College of Engineering and Technology"
+  >
+    Ganapathy Chettiar College of Engineering and Technology
+  </option>
+  <option value="Ganesh College of Engineering">
+    Ganesh College of Engineering
+  </option>
+  <option value="Global Institute of Engineering and Technology">
+    Global Institute of Engineering and Technology
+  </option>
+  <option value="Gnanamani College of Technology">
+    Gnanamani College of Technology
+  </option>
+  <option value="Gojan School of Business and Technology">
+    Gojan School of Business and Technology
+  </option>
+  <option value="GOOD SHEPHERD COLLEGE OF ENGINEERING AND TECHNOLOGY">
+    GOOD SHEPHERD COLLEGE OF ENGINEERING AND TECHNOLOGY
+  </option>
+  <option
+    value="Government College of Engineering (Autonomous), Bargur"
+  >
+    Government College of Engineering (Autonomous), Bargur
+  </option>
+  <option
+    value="Government College of Engineering (Autonomous), Salem"
+  >
+    Government College of Engineering (Autonomous), Salem
+  </option>
+  <option
+    value="Government College of Engineering, Chettikkarai Post"
+  >
+    Government College of Engineering, Chettikkarai Post
+  </option>
+  <option
+    value="Government College of Engineering, Gandarvakottai Road"
+  >
+    Government College of Engineering, Gandarvakottai Road
+  </option>
+  <option
+    value="Government College of Engineering, Melachokkanathapuram"
+  >
+    Government College of Engineering, Melachokkanathapuram
+  </option>
+  <option
+    value="Government College of Engineering, Srirangam, Sethurappatti"
+  >
+    Government College of Engineering, Srirangam, Sethurappatti
+  </option>
+  <option
+    value="Government College of Engineering, Tirunelveli District"
+  >
+    Government College of Engineering, Tirunelveli District
+  </option>
+  <option
+    value="Government College of Technology (Autonomous), Thadagam Road"
+  >
+    Government College of Technology (Autonomous), Thadagam Road
+  </option>
+  <option value="Grace College of Engineering">
+    Grace College of Engineering
+  </option>
+  <option value="GRT Institute of Engineering and Technology">
+    GRT Institute of Engineering and Technology
+  </option>
+  <option value="Hindustan Institute of Technology (Autonomous)">
+    Hindustan Institute of Technology (Autonomous)
+  </option>
+  <option
+    value="Hindusthan College of Engineering and Technology (Autonomous)"
+  >
+    Hindusthan College of Engineering and Technology (Autonomous)
+  </option>
+  <option value="Hindusthan School of Architecture">
+    Hindusthan School of Architecture
+  </option>
+  <option value="Holy Cross Engineering College">
+    Holy Cross Engineering College
+  </option>
+  <option value="I F E T College of Engineering (Autonomous)">
+    I F E T College of Engineering (Autonomous)
+  </option>
+  <option value="Idhaya Engineering College for Women">
+    Idhaya Engineering College for Women
+  </option>
+  <option value="Immanuel Arasar J J College of Engineering">
+    Immanuel Arasar J J College of Engineering
+  </option>
+
+  <option value="Indian Institute of Handloom Technology">
+    Indian Institute of Handloom Technology
+  </option>
+  <option value="Indira Institute of Engineering and Technology">
+    Indira Institute of Engineering and Technology
+  </option>
+  <option value="Indra Ganesan College of Engineering">
+    Indra Ganesan College of Engineering
+  </option>
+  <option value="Infant Jesus College of Engineering">
+    Infant Jesus College of Engineering
+  </option>
+  <option value="INFO Institute of Engineering">
+    INFO Institute of Engineering
+  </option>
+  <option value="Government Engineering College">
+    Government Engineering College
+  </option>
+  <option value="International Maritime Academy">
+    International Maritime Academy
+  </option>
+  <option value="J C T College of Engineering and Technology">
+    J C T College of Engineering and Technology
+  </option>
+  <option value="J J College of Engineering and Technology">
+    J J College of Engineering and Technology
+  </option>
+  <option value="J K K Muniraja College of Technology">
+    J K K Muniraja College of Technology
+  </option>
+  <option
+    value="J K K Nataraja College of Engineering and Technology"
+  >
+    J K K Nataraja College of Engineering and Technology
+  </option>
+  <option value="J N N Institute of Engineering">
+    J N N Institute of Engineering
+  </option>
+  <option value="J P College of Engineering">
+    J P College of Engineering
+  </option>
+  <option value="J.K. College of Architecture">
+    J.K. College of Architecture
+  </option>
+  <option value="Jagannath Institute of Technology">
+    Jagannath Institute of Technology
+  </option>
+  <option value="Jai Shriram Engineering College">
+    Jai Shriram Engineering College
+  </option>
+  <option value="Jainee College of Engineering and Technology">
+    Jainee College of Engineering and Technology
+  </option>
+  <option value="Jairupaa College of Engineering">
+    Jairupaa College of Engineering
+  </option>
+  <option value="Jansons Institute of Technology">
+    Jansons Institute of Technology
+  </option>
+  <option value="Jawahar Engineering College">
+    Jawahar Engineering College
+  </option>
+
+  <option value="Jayam College of Engineering and Technology">
+    Jayam College of Engineering and Technology
+  </option>
+  <option value="Jayamatha Engineering College">
+    Jayamatha Engineering College
+  </option>
+  <option value="Jayaraj Annapackiam CSI College of Engineering">
+    Jayaraj Annapackiam CSI College of Engineering
+  </option>
+  <option value="Jayaram College of Engineering and Technology">
+    Jayaram College of Engineering and Technology
+  </option>
+  <option value="JEI Mathaajee College of Engineering">
+    JEI Mathaajee College of Engineering
+  </option>
+  <option value="Jeppiaar Institute of Technology">
+    Jeppiaar Institute of Technology
+  </option>
+  <option value="Jeppiar Engineering College">
+    Jeppiar Engineering College
+  </option>
+  <option value="Jerusalem College of Engineering (Autonomous)">
+    Jerusalem College of Engineering (Autonomous)
+  </option>
+  <option value="K C G College of Technology">
+    K C G College of Technology
+  </option>
+  <option value="K L N College of Engineering (Autonomous)">
+    K L N College of Engineering (Autonomous)
+  </option>
+  <option
+    value="K P R Institute of Engineering and Technology (Autonomous)"
+  >
+    K P R Institute of Engineering and Technology (Autonomous)
+  </option>
+  <option value="K Ramakrishnan College of Engineering (Autonomous)">
+    K Ramakrishnan College of Engineering (Autonomous)
+  </option>
+  <option value="K Ramakrishnan College of Technology(Autonomous)">
+    K Ramakrishnan College of Technology(Autonomous)
+  </option>
+  <option value="K S K College of Engineering and Technology">
+    K S K College of Engineering and Technology
+  </option>
+  <option value="K S R College of Engineering (Autonomous)">
+    K S R College of Engineering (Autonomous)
+  </option>
+  <option value="K S R Institute for Engineering and Technology">
+    K S R Institute for Engineering and Technology
+  </option>
+  <option value="K S Rangasamy College of Technology (Autonomous)">
+    K S Rangasamy College of Technology (Autonomous)
+  </option>
+  <option
+    value="Kamaraj College of Engineering and Technology (Autonomous)"
+  >
+    Kamaraj College of Engineering and Technology (Autonomous)
+  </option>
+  <option value="Karaikudi Institute of Technology">
+    Karaikudi Institute of Technology
+  </option>
+  <option value="Karpagam College of Engineering (Autonomous)">
+    Karpagam College of Engineering (Autonomous)
+  </option>
+  <option value="Karpagam Institute of Technology">
+    Karpagam Institute of Technology
+  </option>
+  <option
+    value="Karpagavinayaga College of Engineering and Technology"
+  >
+    Karpagavinayaga College of Engineering and Technology
+  </option>
+  <option value="Kathir College of Engineering">
+    Kathir College of Engineering
+  </option>
+  <option value="KGISL Institute of Technology">
+    KGISL Institute of Technology
+  </option>
+  <option value="Kings College of Engineering">
+    Kings College of Engineering
+  </option>
+  <option value="Kings Engineering College">
+    Kings Engineering College
+  </option>
+  <option value="Kingston Engineering College">
+    Kingston Engineering College
+  </option>
+  <option
+    value="KIT-Kalaignar Karunanidhi Institute of Technology (Autonomous)"
+  >
+    KIT-Kalaignar Karunanidhi Institute of Technology (Autonomous)
+  </option>
+  <option value="Knowledge Institute of Technology">
+    Knowledge Institute of Technology
+  </option>
+  <option value="Kongu Engineering College (Autonomous)">
+    Kongu Engineering College (Autonomous)
+  </option>
+  <option value="Kongu School of Architecture">
+    Kongu School of Architecture
+  </option>
+  <option
+    value="Kongunadu College of Engineering and Technology (Autonomous)"
+  >
+    Kongunadu College of Engineering and Technology (Autonomous)
+  </option>
+  <option value="Krishnaswamy Collge of Engineering and Technology">
+    Krishnaswamy Collge of Engineering and Technology
+  </option>
+  <option value="Kumaraguru College of Technology (Autonomous)">
+    Kumaraguru College of Technology (Autonomous)
+  </option>
+  <option value="Kurinji College of Engineering and Technology">
+    Kurinji College of Engineering and Technology
+  </option>
+  <option value="Latha Mathavan Engineering College">
+    Latha Mathavan Engineering College
+  </option>
+  <option
+    value="Lord Jegannath College of Engineering and Technology"
+  >
+    Lord Jegannath College of Engineering and Technology
+  </option>
+  <option value="Lord Venkateshwara Engineering College">
+    Lord Venkateshwara Engineering College
+  </option>
+
+  <option value="Lourdes Mount College of Engineering and Technology">
+    Lourdes Mount College of Engineering and Technology
+  </option>
+  <option value="Loyola Institute of Technology and Science">
+    Loyola Institute of Technology and Science
+  </option>
+  <option value="Loyola Institute of Technology">
+    Loyola Institute of Technology
+  </option>
+  <option value="Loyola-ICAM College of Engineering and Technology">
+    Loyola-ICAM College of Engineering and Technology
+  </option>
+  <option value="M E T Engineering College">
+    M E T Engineering College
+  </option>
+  <option value="M I E T Engineering College">
+    M I E T Engineering College
+  </option>
+  <option value="M Kumarasamy College of Engineering (Autonomous)">
+    M Kumarasamy College of Engineering (Autonomous)
+  </option>
+  <option value="M P Nachimuthu M Jagannathan Engineering College">
+    M P Nachimuthu M Jagannathan Engineering College
+  </option>
+  <option value="M R K Institute of Technology">
+    M R K Institute of Technology
+  </option>
+  <option value="M.A.M. College of Engineering and Technology">
+    M.A.M. College of Engineering and Technology
+  </option>
+  <option value="M.A.M. College of Engineering">
+    M.A.M. College of Engineering
+  </option>
+  <option value="M.A.M. School of Architecture">
+    M.A.M. School of Architecture
+  </option>
+  <option value="M.A.M. School of Engineering">
+    M.A.M. School of Engineering
+  </option>
+  <option value="Madha Engineering College">
+    Madha Engineering College
+  </option>
+  <option value="Madha Institute of Engineering and Technology">
+    Madha Institute of Engineering and Technology
+  </option>
+  <option value="Madha school of Architecture">
+    Madha school of Architecture
+  </option>
+  <option value="Madurai Institute of Engineering & Technology">
+    Madurai Institute of Engineering & Technology
+  </option>
+  <option value="Maha Bharathi Engineering College">
+    Maha Bharathi Engineering College
+  </option>
+  <option
+    value="Mahakavi Bharathiyar College of Engineering and Technology"
+  >
+    Mahakavi Bharathiyar College of Engineering and Technology
+  </option>
+  <option
+    value="Mahath Amma Institute of Engineering and Technology (MIET)"
+  >
+    Mahath Amma Institute of Engineering and Technology (MIET)
+  </option>
+  <option value="Mahendra College of Engineering">
+    Mahendra College of Engineering
+  </option>
+  <option value="Mahendra Engineering College (Autonomous)">
+    Mahendra Engineering College (Autonomous)
+  </option>
+  <option value="Mahendra Engineering College for Women">
+    Mahendra Engineering College for Women
+  </option>
+  <option value="Mahendra Institute of Engineering and Technology">
+    Mahendra Institute of Engineering and Technology
+  </option>
+  <option value="Mahendra Institute of Technology (Autonomous)">
+    Mahendra Institute of Technology (Autonomous)
+  </option>
+  <option value="Mailam Engineering College">
+    Mailam Engineering College
+  </option>
+  <option value="Mangayarkarasi College of Engineering">
+    Mangayarkarasi College of Engineering
+  </option>
+  <option value="MAR Ephraem College of Engineering & Technology">
+    MAR Ephraem College of Engineering & Technology
+  </option>
+  <option
+    value="MARG Instiute of Design & Architecture Swarnabhoomi (MIDAS)"
+  >
+    MARG Instiute of Design & Architecture Swarnabhoomi (MIDAS)
+  </option>
+  <option value="Maria College of Engineering and Technology">
+    Maria College of Engineering and Technology
+  </option>
+  <option value="Marthandam College of Engineering & Technology">
+    Marthandam College of Engineering & Technology
+  </option>
+  <option value="McGans Ooty School Of Architecture">
+    McGans Ooty School Of Architecture
+  </option>
+  <option value="Measi Academy of Architecture">
+    Measi Academy of Architecture
+  </option>
+  <option value="Meenakshi College of Engineering">
+    Meenakshi College of Engineering
+  </option>
+  <option value="Meenakshi Ramaswamy Engineering College">
+    Meenakshi Ramaswamy Engineering College
+  </option>
+  <option value="Meenakshi Sundararajan Engineering College">
+    Meenakshi Sundararajan Engineering College
+  </option>
+  <option value="Mepco Schlenk Engineering College (Autonomous)">
+    Mepco Schlenk Engineering College (Autonomous)
+  </option>
+  <option value="Misrimal Navajee Munoth Jain Engineering College">
+    Misrimal Navajee Munoth Jain Engineering College
+  </option>
+  <option value="Misrimal Navajee Munoth Jain School of Architecture">
+    Misrimal Navajee Munoth Jain School of Architecture
+  </option>
+  <option value="MMES ACADEMY OF ARCHITECTURE, VELLORE">
+    MMES ACADEMY OF ARCHITECTURE, VELLORE
+  </option>
+  <option value="Mohamed Sathak A J Academy of Architecture">
+    Mohamed Sathak A J Academy of Architecture
+  </option>
+
+  <option value="Mohamed Sathak A J College of Engineering">
+    Mohamed Sathak A J College of Engineering
+  </option>
+  <option value="Mohamed Sathak Engineering College">
+    Mohamed Sathak Engineering College
+  </option>
+  <option value="Mookambigai College of Engineering">
+    Mookambigai College of Engineering
+  </option>
+  <option value="Mother Terasa College of Engineering and Technology">
+    Mother Terasa College of Engineering and Technology
+  </option>
+  <option value="Mount Zion College of Engineering and Technology">
+    Mount Zion College of Engineering and Technology
+  </option>
+  <option value="Muthayammal College of Engineering">
+    Muthayammal College of Engineering
+  </option>
+  <option value="Muthayammal Engineering College (Autonomous)">
+    Muthayammal Engineering College (Autonomous)
+  </option>
+  <option value="N P R College of Engineering and Technology">
+    N P R College of Engineering and Technology
+  </option>
+  <option value="N S N College of Engineering and Technology">
+    N S N College of Engineering and Technology
+  </option>
+  <option
+    value="Nadar Saraswathi College of Engineering and Technology"
+  >
+    Nadar Saraswathi College of Engineering and Technology
+  </option>
+  <option value="Nandha College of Technology">
+    Nandha College of Technology
+  </option>
+  <option value="Nandha Engineering College (Autonomous)">
+    Nandha Engineering College (Autonomous)
+  </option>
+  <option value="Narasus Sarathy Institute of Technology">
+    Narasus Sarathy Institute of Technology
+  </option>
+  <option value="Narayanaguru College of Engineering">
+    Narayanaguru College of Engineering
+  </option>
+  <option value="National Engineering College (Autonomous)">
+    National Engineering College (Autonomous)
+  </option>
+  <option value="Nehru Institute of Engineering and Technology">
+    Nehru Institute of Engineering and Technology
+  </option>
+  <option value="Nehru Institute of Technology">
+    Nehru Institute of Technology
+  </option>
+  <option value="Nehru School of Architecture">
+    Nehru School of Architecture
+  </option>
+  <option value="Nellai College of Engineering">
+    Nellai College of Engineering
+  </option>
+  <option value="Nelliandavar Institute of Technology">
+    Nelliandavar Institute of Technology
+  </option>
+  <option
+    value="New Prince Shri Bhavani College of Engineering and Technology"
+  >
+    New Prince Shri Bhavani College of Engineering and Technology
+  </option>
+  <option value="OASYS Institute of Technology">
+    OASYS Institute of Technology
+  </option>
+  <option value="Oxford College of Engineering">
+    Oxford College of Engineering
+  </option>
+  <option value="Oxford Engineering College">
+    Oxford Engineering College
+  </option>
+  <option
+    value="P A College of Engineering and Technology (Autonomous)"
+  >
+    P A College of Engineering and Technology (Autonomous)
+  </option>
+  <option value="P B College of Engineering">
+    P B College of Engineering
+  </option>
+  <option value="P G P College of Engineering and Technology">
+    P G P College of Engineering and Technology
+  </option>
+  <option value="P M R Engineering College">
+    P M R Engineering College
+  </option>
+  <option value="P P G Institute of Technology">
+    P P G Institute of Technology
+  </option>
+  <option value="P R Engineering College">
+    P R Engineering College
+  </option>
+  <option value="P S N A Colllege of Engineering and Technology">
+    P S N A Colllege of Engineering and Technology
+  </option>
+  <option
+    value="P S N College of Engineering and Technology (Autonomous)"
+  >
+    P S N College of Engineering and Technology (Autonomous)
+  </option>
+  <option value="P S N Engineering College">
+    P S N Engineering College
+  </option>
+  <option value="P S N Institute of Technology & Science">
+    P S N Institute of Technology & Science
+  </option>
+  <option value="P S R Engineering College (Autonomous)">
+    P S R Engineering College (Autonomous)
+  </option>
+  <option value="P S V College of Engineeering and Technology">
+    P S V College of Engineeering and Technology
+  </option>
+  <option
+    value="P T Lee Chengalvaraya Naicker College of Engineering and Technology"
+  >
+    P T Lee Chengalvaraya Naicker College of Engineering and
+    Technology
+  </option>
+  <option value="P T R College of Engineering and Technology">
+    P T R College of Engineering and Technology
+  </option>
+
+  <option value="P.S.R.R College of Engineering Appayanaickenpatti">
+    P.S.R.R College of Engineering Appayanaickenpatti
+  </option>
+  <option value="Paavai College of Engineering">
+    Paavai College of Engineering
+  </option>
+  <option value="Paavai College of Technology">
+    Paavai College of Technology
+  </option>
+  <option value="Paavai Engineering College (Autonomous)">
+    Paavai Engineering College (Autonomous)
+  </option>
+  <option value="Pallavan College of Engineering">
+    Pallavan College of Engineering
+  </option>
+  <option value="Pandian Saraswathi Yadav Engineering College">
+    Pandian Saraswathi Yadav Engineering College
+  </option>
+  <option value="Panimalar Engineering College">
+    Panimalar Engineering College
+  </option>
+  <option value="Panimalar Institute of Technology">
+    Panimalar Institute of Technology
+  </option>
+  <option value="Papni School of Architecture">
+    Papni School of Architecture
+  </option>
+  <option value="Parisutham Institute of Technology and Science">
+    Parisutham Institute of Technology and Science
+  </option>
+  <option value="Park College of Engineering and Technology">
+    Park College of Engineering and Technology
+  </option>
+  <option value="Park College of Technology">
+    Park College of Technology
+  </option>
+  <option value="Park Institute of Architecture">
+    Park Institute of Architecture
+  </option>
+  <option
+    value="Pavendhar Bharathidasan College of Engineering and Technology"
+  >
+    Pavendhar Bharathidasan College of Engineering and Technology
+  </option>
+  <option value="PERI Institute of Technology">
+    PERI Institute of Technology
+  </option>
+  <option value="PET Engineering College">
+    PET Engineering College
+  </option>
+  <option value="Podhigai College of Engineering and Technology">
+    Podhigai College of Engineering and Technology
+  </option>
+  <option value="Pollachi Institute of Engineering and Technology">
+    Pollachi Institute of Engineering and Technology
+  </option>
+  <option value="Ponjesly College of Engineering">
+    Ponjesly College of Engineering
+  </option>
+  <option value="Prathyusha Engineering college">
+    Prathyusha Engineering college
+  </option>
+  <option value="Prime College of Architecture and Planning">
+    Prime College of Architecture and Planning
+  </option>
+  <option value="Prime Nest College of Architecture and Planning">
+    Prime Nest College of Architecture and Planning
+  </option>
+  <option
+    value="Prince Dr. K Vasudevan College of Engineering and Technology"
+  >
+    Prince Dr. K Vasudevan College of Engineering and Technology
+  </option>
+  <option
+    value="Prince Shri Venkateshwara Padmavathy Enginering College"
+  >
+    Prince Shri Venkateshwara Padmavathy Enginering College
+  </option>
+  <option value="Priyadarshini Engineering College">
+    Priyadarshini Engineering College
+  </option>
+  <option value="PSG College of Technology (Autonomous)">
+    PSG College of Technology (Autonomous)
+  </option>
+  <option value="PSG Institute of Technology and Applied Research">
+    PSG Institute of Technology and Applied Research
+  </option>
+
+  <option value="R M D Engineering College">
+    R M D Engineering College
+  </option>
+  <option value="R M K College of Engineering and Technology">
+    R M K College of Engineering and Technology
+  </option>
+  <option value="R M K Engineering College (Autonomous)">
+    R M K Engineering College (Autonomous)
+  </option>
+  <option value="R V S College of Engineering and Technology">
+    R V S College of Engineering and Technology
+  </option>
+  <option value="R V S College of Engineering">
+    R V S College of Engineering
+  </option>
+  <option
+    value="R V S Educational Trust’s Groups of Institutions (Integrated Campus)"
+  >
+    R V S Educational Trust’s Groups of Institutions (Integrated
+    Campus)
+  </option>
+  <option value="R V S Padmavathy School of Architecture">
+    R V S Padmavathy School of Architecture
+  </option>
+  <option value="R V S School of Architecture">
+    R V S School of Architecture
+  </option>
+  <option value="R V S Technical Campus-Coimbatore">
+    R V S Technical Campus-Coimbatore
+  </option>
+  <option value="Rajalakshmi Engineering College (Autonomous)">
+    Rajalakshmi Engineering College (Autonomous)
+  </option>
+  <option value="Rajalakshmi Institute of Technology">
+    Rajalakshmi Institute of Technology
+  </option>
+  <option value="Rajalakshmi School of Architecture">
+    Rajalakshmi School of Architecture
+  </option>
+  <option value="RajasInstitute of Technology">
+    RajasInstitute of Technology
+  </option>
+  <option value="Rajiv Gandhi College of Engineering">
+    Rajiv Gandhi College of Engineering
+  </option>
+  <option value="Ramco Institute of Technology">
+    Ramco Institute of Technology
+  </option>
+  <option value="Ranganathan Architecture College">
+    Ranganathan Architecture College
+  </option>
+  <option value="Ranippettai Engineering College">
+    Ranippettai Engineering College
+  </option>
+  <option value="Rathinam School of Architecture">
+    Rathinam School of Architecture
+  </option>
+  <option value="Rathinam Technical Campus">
+    Rathinam Technical Campus
+  </option>
+  <option value="Renganayagi Varatharaj College of Engineering">
+    Renganayagi Varatharaj College of Engineering
+  </option>
+  <option value="Roever Engineering College">
+    Roever Engineering College
+  </option>
+  <option value="Rohini College of Engineering & Technology">
+    Rohini College of Engineering & Technology
+  </option>
+  <option value="Rrase College of Engineering">
+    Rrase College of Engineering
+  </option>
+  <option value="S A Engineering College (Autonomous)">
+    S A Engineering College (Autonomous)
+  </option>
+  <option value="S K P Engineering College">
+    S K P Engineering College
+  </option>
+  <option value="S N S College of Engineering (Autonomous)">
+    S N S College of Engineering (Autonomous)
+  </option>
+  <option value="S N S College of Technology (Autonomous)">
+    S N S College of Technology (Autonomous)
+  </option>
+  <option value="S S M College of Engineering">
+    S S M College of Engineering
+  </option>
+  <option
+    value="S Veerasamy Chettiar College of Engineering and Technology"
+  >
+    S Veerasamy Chettiar College of Engineering and Technology
+  </option>
+  <option value="SACS-M A V M M Engineering College">
+    SACS-M A V M M Engineering College
+  </option>
+  <option value="Salem College of Engineering and Technology">
+    Salem College of Engineering and Technology
+  </option>
+  <option value="SAMS College of Engineering and Technology">
+    SAMS College of Engineering and Technology
+  </option>
+  <option value="San Academy of Architecture">
+    San Academy of Architecture
+  </option>
+  <option value="Saranathan College of Engineering">
+    Saranathan College of Engineering
+  </option>
+  <option value="Saraswathy College of Engineering and Technology">
+    Saraswathy College of Engineering and Technology
+  </option>
+  <option value="Sardar Raja College of Engineering">
+    Sardar Raja College of Engineering
+  </option>
+  <option value="Sasi Creative School of Archiecture">
+    Sasi Creative School of Archiecture
+  </option>
+  <option value="Sasurie College of Engineering">
+    Sasurie College of Engineering
+  </option>
+  <option value="Satyam College of Engineering & Technology">
+    Satyam College of Engineering & Technology
+  </option>
+  <option value="Saveetha Engineering College (Autonomous)">
+    Saveetha Engineering College (Autonomous)
+  </option>
+  <option value="SBM College of Engineering and Technology">
+    SBM College of Engineering and Technology
+  </option>
+  <option value="SCAD College of Engineering and Technology">
+    SCAD College of Engineering and Technology
+  </option>
+  <option
+    value="School Of Architecture Coimbatore Institute Of Engineering And Technology"
+  >
+    School Of Architecture Coimbatore Institute Of Engineering And
+    Technology
+  </option>
+
+  <option value="Selvam College of Technology">
+    Selvam College of Technology
+  </option>
+  <option value="Sembodai Rukmani Varatharajan Engineering College">
+    Sembodai Rukmani Varatharajan Engineering College
+  </option>
+  <option value="Sengunthar College of Engineering">
+    Sengunthar College of Engineering
+  </option>
+  <option value="Sengunthar Engineering College (Autonomous)">
+    Sengunthar Engineering College (Autonomous)
+  </option>
+  <option value="Sethu Institute of Technology (Autonomous)">
+    Sethu Institute of Technology (Autonomous)
+  </option>
+  <option value="Shanmuganathan Engineering College">
+    Shanmuganathan Engineering College
+  </option>
+  <option value="Shivani Engineering College">
+    Shivani Engineering College
+  </option>
+  <option
+    value="Shree Motilal Kanhaiyalal (SMK)Fomra Institute of Technology"
+  >
+    Shree Motilal Kanhaiyalal (SMK)Fomra Institute of Technology
+  </option>
+  <option value="Shree Sathyam College of Engineering and Technology">
+    Shree Sathyam College of Engineering and Technology
+  </option>
+  <option value="Shree Venkateshwara Hi-Tech Engineering College">
+    Shree Venkateshwara Hi-Tech Engineering College
+  </option>
+  <option value="Shreenivasa Engineering College">
+    Shreenivasa Engineering College
+  </option>
+  <option
+    value="Shri Angalamman College of Engineering and Technology"
+  >
+    Shri Angalamman College of Engineering and Technology
+  </option>
+  <option value="Sigma College of Architecture">
+    Sigma College of Architecture
+  </option>
+  <option
+    value="Sir Issac Newton College of Engineering and Technology"
+  >
+    Sir Issac Newton College of Engineering and Technology
+  </option>
+  <option value="Sivaji College of Engineering and Technology">
+    Sivaji College of Engineering and Technology
+  </option>
+  <option value="SMR East Coast College of Engineering & Technology">
+    SMR East Coast College of Engineering & Technology
+  </option>
+  <option value="SOLAMALAI COLLEGE OF ENGINEERIG">
+    SOLAMALAI COLLEGE OF ENGINEERIG
+  </option>
+  <option value="Sona College of Technology (Autonomous)">
+    Sona College of Technology (Autonomous)
+  </option>
+  <option value="Sree Krishna College of Engineering">
+    Sree Krishna College of Engineering
+  </option>
+  <option
+    value="Sree Krishna College of Enginering and Technology (Autonomous)"
+  >
+    Sree Krishna College of Enginering and Technology (Autonomous)
+  </option>
+  <option value="Sree Krishna College of Technology (Autonomous)">
+    Sree Krishna College of Technology (Autonomous)
+  </option>
+  <option value="Sri Krishna College of Engineering">
+    Sri Krishna College of Engineering
+  </option>
+  <option value="Sri Krishna Institute of Technology">
+    Sri Krishna Institute of Technology
+  </option>
+  <option value="Sri Muthukumaran Institute of Technology">
+    Sri Muthukumaran Institute of Technology
+  </option>
+  <option value="Sri Ram Engineering College">
+    Sri Ram Engineering College
+  </option>
+  <option value="Sri Ramakrishna College of Engineering">
+    Sri Ramakrishna College of Engineering
+  </option>
+  <option value="Sri Ramakrishna Engineering College (Autonomous)">
+    Sri Ramakrishna Engineering College (Autonomous)
+  </option>
+  <option
+    value="Sri Ramakrishna Institute of Technology (Autonomous)"
+  >
+    Sri Ramakrishna Institute of Technology (Autonomous)
+  </option>
+  <option value="Sri Ramanujar Engineering College">
+    Sri Ramanujar Engineering College
+  </option>
+  <option value="Sri Rangapoopathi College of Engineering">
+    Sri Rangapoopathi College of Engineering
+  </option>
+  <option
+    value="Sri Ranganathar Institute of Engineering and Technology"
+  >
+    Sri Ranganathar Institute of Engineering and Technology
+  </option>
+  <option value="Sri Sai Ram Institute of Technology (Autonomous)">
+    Sri Sai Ram Institute of Technology (Autonomous)
+  </option>
+  <option value="Sri Sai Ranganathan Engineering College">
+    Sri Sai Ranganathan Engineering College
+  </option>
+  <option value="Sri Sairam Enginering College (Autonomous)">
+    Sri Sairam Enginering College (Autonomous)
+  </option>
+  <option
+    value="Sri Shakthi Institute of Engineering and Technology (Autonomous)"
+  >
+    Sri Shakthi Institute of Engineering and Technology (Autonomous)
+  </option>
+  <option value="Sri Shanmugha College of Engineering and Technology">
+    Sri Shanmugha College of Engineering and Technology
+  </option>
+  <option
+    value="Sri Sivasubramaniya Nadar College of Engineering (Autonomous)"
+  >
+    Sri Sivasubramaniya Nadar College of Engineering (Autonomous)
+  </option>
+  <option
+    value="Sri Subramanya College of Engineering and Technology"
+  >
+    Sri Subramanya College of Engineering and Technology
+  </option>
+  <option
+    value="Sri Venkateswara College of Engineering (Autonomous)"
+  >
+    Sri Venkateswara College of Engineering (Autonomous)
+  </option>
+  <option
+    value="Sri Venkateswara College of Engineering and Technology"
+  >
+    Sri Venkateswara College of Engineering and Technology
+  </option>
+  <option value="Sri Venkateswaraa College of Technology">
+    Sri Venkateswaraa College of Technology
+  </option>
+  <option value="Sri Vidhya College of Engineering and Technology">
+    Sri Vidhya College of Engineering and Technology
+  </option>
+  <option value="SRM TRP Engineering College">
+    SRM TRP Engineering College
+  </option>
+  <option value="SRM Valliammai Engineering College (Autonomous)">
+    SRM Valliammai Engineering College (Autonomous)
+  </option>
+  <option value="SSM Institute of Engineering and Technology">
+    SSM Institute of Engineering and Technology
+  </option>
+  <option value="St. Annes College of Engineering and Technology">
+    St. Annes College of Engineering and Technology
+  </option>
+  <option value="St. Joseph College of Engineering">
+    St. Joseph College of Engineering
+  </option>
+  <option value="St. Joseph’s College of Engineering">
+    St. Joseph’s College of Engineering
+  </option>
+  <option value="St. Joseph’s Institute of Technology">
+    St. Joseph’s Institute of Technology
+  </option>
+  <option value="St. Josephs College of Engineering and Technology">
+    St. Josephs College of Engineering and Technology
+  </option>
+  <option value="St. Michael College of Engineering and Technology">
+    St. Michael College of Engineering and Technology
+  </option>
+  <option value="St. Mother Theresa Engineering College">
+    St. Mother Theresa Engineering College
+  </option>
+  <option value="St. Peters College of Engineering and Technology">
+    St. Peters College of Engineering and Technology
+  </option>
+  <option value="St. Xavier Catholic College of Engineering">
+    St. Xavier Catholic College of Engineering
+  </option>
+  <option value="Star Lion College of Engineering & Technology">
+    Star Lion College of Engineering & Technology
+  </option>
+  <option value="Stella Marys College of Engineering">
+    Stella Marys College of Engineering
+  </option>
+  <option value="Study World College of Engineering">
+    Study World College of Engineering
+  </option>
+  <option value="Sudharsan Engineering College">
+    Sudharsan Engineering College
+  </option>
+  <option value="Suguna College of Engineering">
+    Suguna College of Engineering
+  </option>
+  <option value="Surya College of Engineering">
+    Surya College of Engineering
+  </option>
+  <option value="Surya Engineering College">
+    Surya Engineering College
+  </option>
+  <option value="Surya Group of Institutions">
+    Surya Group of Institutions
+  </option>
+  <option value="Surya School of Architecture">
+    Surya School of Architecture
+  </option>
+  <option value="Syed Ammal Engineering College">
+    Syed Ammal Engineering College
+  </option>
+  <option value="T J S Engineering College">
+    T J S Engineering College
+  </option>
+  <option value="T S M Jain College of Technology">
+    T S M Jain College of Technology
+  </option>
+  <option value="T.J INSTITUTE OF TECHNOLOGY">
+    T.J INSTITUTE OF TECHNOLOGY
+  </option>
+  <option value="Tagore Engineering College">
+    Tagore Engineering College
+  </option>
+  <option value="Tagore Institute of Engineering and Technology">
+    Tagore Institute of Engineering and Technology
+  </option>
+  <option value="Tamilnadu College of Engineering">
+    Tamilnadu College of Engineering
+  </option>
+  <option value="Tamilnadu School of Architecture">
+    Tamilnadu School of Architecture
+  </option>
+  <option value="Thamirabharani Engineering College">
+    Thamirabharani Engineering College
+  </option>
+  <option value="Thangavelu Engineering College">
+    Thangavelu Engineering College
+  </option>
+  <option value="Thanthai Periyar Government Institute of Technology">
+    Thanthai Periyar Government Institute of Technology
+  </option>
+  <option value="The Kavery Engineering College">
+    The Kavery Engineering College
+  </option>
+  <option value="Theni Kammavar Sangam College of Technology">
+    Theni Kammavar Sangam College of Technology
+  </option>
+  <option value="Thiagarajar College of Engineering (Autonomous)">
+    Thiagarajar College of Engineering (Autonomous)
+  </option>
+  <option value="Thirumalai Engineering College">
+    Thirumalai Engineering College
+  </option>
+  <option value="Thiruvalluvar College of Engineering and Technology">
+    Thiruvalluvar College of Engineering and Technology
+  </option>
+  <option value="Trichy Engineering College">
+    Trichy Engineering College
+  </option>
+  <option value="Udaya School of Engineering">
+    Udaya School of Engineering
+  </option>
+  <option value="Ultra College of Engineering and Technology">
+    Ultra College of Engineering and Technology
+  </option>
+  <option value="United Institute of Technology">
+    United Institute of Technology
+  </option>
+  <option value="Universal College of Engineering and Technology">
+    Universal College of Engineering and Technology
+  </option>
+  <option value="University College of Engineering, Ariyalur">
+    University College of Engineering, Ariyalur
+  </option>
+  <option value="University College of Engineering, Arni">
+    University College of Engineering, Arni
+  </option>
+  <option value="University College of Engineering, Dindigul">
+    University College of Engineering, Dindigul
+  </option>
+  <option value="University College of Engineering, Kancheepuram">
+    University College of Engineering, Kancheepuram
+  </option>
+  <option value="University College of Engineering, Nagercoil">
+    University College of Engineering, Nagercoil
+  </option>
+  <option value="University College of Engineering, Panruti">
+    University College of Engineering, Panruti
+  </option>
+  <option value="University College of Engineering, Pattukkottai">
+    University College of Engineering, Pattukkottai
+  </option>
+  <option value="University College of Engineering, Ramanathapuram">
+    University College of Engineering, Ramanathapuram
+  </option>
+  <option value="University College of Engineering, Thirukkuvalai">
+    University College of Engineering, Thirukkuvalai
+  </option>
+  <option value="University College of Engineering, Tindivanam">
+    University College of Engineering, Tindivanam
+  </option>
+  <option value="University College of Engineering, Tiruchirappalli">
+    University College of Engineering, Tiruchirappalli
+  </option>
+  <option value="University College of Engineering, Villupuram">
+    University College of Engineering, Villupuram
+  </option>
+  <option
+    value="University Departments of Anna University, Chennai - ACT Campus"
+  >
+    University Departments of Anna University, Chennai - ACT Campus
+  </option>
+  <option
+    value="University Departments of Anna University, Chennai - CEG Campus"
+  >
+    University Departments of Anna University, Chennai - CEG Campus
+  </option>
+  <option
+    value="University Departments of Anna University, Chennai - MIT Campus"
+  >
+    University Departments of Anna University, Chennai - MIT Campus
+  </option>
+  <option
+    value="University Departments of Anna University, Chennai - SAP Campus"
+  >
+    University Departments of Anna University, Chennai - SAP Campus
+  </option>
+  <option value="University V.O.C. College of Engineering">
+    University V.O.C. College of Engineering
+  </option>
+  <option value="Unnamalai Institute of Technology">
+    Unnamalai Institute of Technology
+  </option>
+  <option
+    value="V P Muthaiah Pillai Meenakshi Ammal Engineering College for Women"
+  >
+    V P Muthaiah Pillai Meenakshi Ammal Engineering College for Women
+  </option>
+  <option value="V R S College of Engineering and Technology">
+    V R S College of Engineering and Technology
+  </option>
+  <option value="V S A Group of Institutions">
+    V S A Group of Institutions
+  </option>
+  <option value="V S B College of Engineering Technical Campus">
+    V S B College of Engineering Technical Campus
+  </option>
+  <option value="V S B Engineering College">
+    V S B Engineering College
+  </option>
+  <option value="V V College of Engineering">
+    V V College of Engineering
+  </option>
+  <option value="V.P.M.M. College of Architecture for Women">
+    V.P.M.M. College of Architecture for Women
+  </option>
+  <option value="Vaigai College of Engineering">
+    Vaigai College of Engineering
+  </option>
+  <option value="Vandayar Engineering College">
+    Vandayar Engineering College
+  </option>
+  <option value="Varuvan Vadivelan Institute of Technology">
+    Varuvan Vadivelan Institute of Technology
+  </option>
+  <option
+    value="Vel Tech High Tech Dr. Rangarajan Dr. Sakunthala Engineering College"
+  >
+    Vel Tech High Tech Dr. Rangarajan Dr. Sakunthala Engineering
+    College
+  </option>
+  <option
+    value="Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College (Autonomous)"
+  >
+    Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering
+    College (Autonomous)
+  </option>
+  <option
+    value="Velalar College of Engineering and Technology (Autonomous)"
+  >
+    Velalar College of Engineering and Technology (Autonomous)
+  </option>
+  <option value="Velammal College of Engineering and Technology">
+    Velammal College of Engineering and Technology
+  </option>
+  <option value="Velammal Engineering College (Autonomous)">
+    Velammal Engineering College (Autonomous)
+  </option>
+  <option value="Velammal Institute of Technology">
+    Velammal Institute of Technology
+  </option>
+  <option
+    value="Vetri Vinayaha College of Engineering and Technology"
+  >
+    Vetri Vinayaha College of Engineering and Technology
+  </option>
+
+  <option value="Vi Institute of Technology">
+    Vi Institute of Technology
+  </option>
+  <option value="Vidhya Vikkas College of Engineering and Technology">
+    Vidhya Vikkas College of Engineering and Technology
+  </option>
+  <option value="Vins Christian College of Engineering">
+    Vins Christian College of Engineering
+  </option>
+  <option value="Vins Christian Womens College of Engineering">
+    Vins Christian Womens College of Engineering
+  </option>
+  <option
+    value="Vivekanandha College of Engineering for Women (Autonomous)"
+  >
+    Vivekanandha College of Engineering for Women (Autonomous)
+  </option>
+  <option value="Vivekanandha College of Technology for Women">
+    Vivekanandha College of Technology for Women
+  </option>
+  <option value="Excel College Of Architecture And Planning">
+    Excel College Of Architecture And Planning
+  </option>
+  <option value="Tips School of Architecture">
+    Tips School of Architecture
+  </option>
+</select>
+</div>
+            
+            <!-- Club/Association Name -->
+            <div class="form-group" id="clubAssociationSection" style="display: none;">
+                <label for="clubAssociation">Club/Association Name:</label>
+                <input type="text" class="form-control" id="clubAssociation" name="club_association" placeholder="Club/Association Name">
+            </div>
+            
+            <!-- File upload section -->
+            <div class="form-group">
+                <label for="proofFile">Proof Image:</label>
+                <div id="fileInputs">
+                    <input type="file" class="form-control" name="proofFile[]" multiple><br><br>
+                </div>
+                <button type="button" class="btn btn-secondary" id="addFileBtn">Add File</button>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="submitButton" class="btn btn-primary mb-3">Submit</button>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Your custom script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to generate radio buttons based on selected SAP type
+            function generateEventOptions(selectedSAP) {
+                 var options = '';
+                switch (selectedSAP) {
+                    case 'Paper':
+                        options = `
+                            <div class="form-group">
+                                <h3>Paper Presentation Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="paper_options" value="Only Submitted"> Only Submitted (2 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="paper_options" value="Presented Inside"> Presented Inside (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="paper_options" value="Presented Outside"> Presented Outside (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="paper_options" value="Presented in Premier"> Presented in Premier (15 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="paper_options" value="Won Prize Inside"> Won Prize Inside (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="paper_options" value="Won Outside"> Won Outside (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="paper_options" value="Won in Premier"> Won in Premier (50 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Project':
+                        options = `
+                            <div class="form-group">
+                                <h3>Project Presentation Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_options" value="Only Submitted"> Only Submitted (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_options" value="Presented Inside"> Presented Inside (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_options" value="Presented Outside"> Presented Outside (15 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_options" value="Presented in Premier"> Presented in Premier (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_options" value="Won Prize Inside"> Won Prize Inside (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_options" value="Won Outside"> Won Outside (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_options" value="Won in Premier"> Won in Premier (50 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'TechnoManagerial':
+                        options = `
+                            <div class="form-group">
+                                <h3>Technomanagerial Event Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Participated Inside"> Participated Inside (2 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Participated Outside"> Participated Outside (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Participated State Level"> Participated State Level (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Participated National/International"> Participated National/International (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Won Inside"> Won Inside (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Won Outside"> Won Outside (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Won State Level"> Won State Level (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="techno_options" value="Won National/International"> Won National/International (50 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Sports':
+                        options = `
+                            <div class="form-group">
+                                <h3>Sports and Games Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Participated Inside"> Participated Inside (2 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Participated Zone/Outside"> Participated Zone/Outside (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Participated Interzone/State Level"> Participated Interzone/State Level (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Participated National"> Participated National (50 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Participated International"> Participated International (100 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Won Inside"> Won Inside (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Won Zone/Outside"> Won Zone/Outside (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Won Interzone/State Level"> Won Interzone/State Level (40 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="sports_options" value="Won National/International"> Won National/International (100 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Membership':
+                        options = `
+                            <div class="form-group">
+                                <h3>Membership Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="membership_options" value="NCC/NSS"> NCC/NSS (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="membership_options" value="Professional Society"> Professional Society (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="membership_options" value="Clubs"> Clubs (2 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Leadership':
+                        options = `
+                            <div class="form-group">
+                                <h3>Leadership/Organizing Events Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Chairman"> Chairman (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Secretary"> Secretary (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Treasurer"> Treasurer (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Joint Secretary"> Joint Secretary (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Vice Chairman"> Vice Chairman (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Executive Member"> Executive Member (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Class Representative"> Class Representative (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Placement Coordinator"> Placement Coordinator (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="Cell Coordinator"> Cell Coordinator (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="IV Coordinator"> IV Coordinator (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="leadership_options" value="IPT Coordinator"> IPT Coordinator (10 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Courses':
+                        options = `
+                            <div class="form-group">
+                                <h3>Value Added Courses/Online Courses Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="courses_options" value="Value Added Course(Non-credit)"> Value Added Course (Non-credit) (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="courses_options" value="One-credit Course"> One-credit Course (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="courses_options" value="Two-credit Course"> Two-credit Course (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="courses_options" value="More than Two-credit Course"> More than Two-credit Course (30 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'ProjectToPaper':
+                        options = `
+                            <div class="form-group">
+                                <h3>Project to Paper/Patent/Copyright Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Sci Indexed - Submitted"> Sci Indexed - Submitted (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Sci Indexed - Published"> Sci Indexed - Published (50 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="WOS/Scopus Journal/Conference - Submitted"> WOS/Scopus Journal/Conference - Submitted (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="WOS/Scopus Journal/Conference - Published"> WOS/Scopus Journal/Conference - Published (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Other Journal/Conference"> Other Journal/Conference (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Patent - Applied"> Patent - Applied (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Patent - Published"> Patent - Published (20 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Patent - Obtained"> Patent - Obtained (100 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Copyright - Applied"> Copyright - Applied (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="project_to_paper_options" value="Copyright - Published"> Copyright - Published (10 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Exams':
+                        options = `
+                            <div class="form-group">
+                                <h3>GATE/CAT/Govt Exams Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="exams_options" value="Appeared"> Appeared (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="exams_options" value="Qualified"> Qualified (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="exams_options" value="Good National Ranking"> Good National Ranking (100 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="exams_options" value="Cleared Govt Exams"> Cleared Govt Exams (100 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Placement':
+                        options = `
+                            <div class="form-group">
+                                <h3>Placement and Internship Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="placement_options" value="Written Test Cleared"> Written Test Cleared (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="placement_options" value="Placed"> Placed (40 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="placement_options" value="Placed with Internship"> Placed with Internship (50 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="placement_options" value="Placed without Internship"> Placed without Internship (20 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'Entrepreneurship':
+                        options = `
+                            <div class="form-group">
+                                <h3>Entrepreneurship Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="entrepreneurship_options" value="Workshop"> Workshop (10 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="entrepreneurship_options" value="Registered for Startup"> Registered for Startup (50 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="entrepreneurship_options" value="Released Product"> Released Product (100 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'SocialActivities':
+                        options = `
+                            <div class="form-group">
+                                <h3>Social Activities Options:</h3>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="social_activities_options" value="Blood Donated"> Blood Donated (5 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="social_activities_options" value="1 to 2 Weeks NCC/NSS Camp"> 1 to 2 Weeks NCC/NSS Camp (30 points)
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="social_activities_options" value="More than Two Weeks NCC/NSS Camp"> More than Two Weeks NCC/NSS Camp (50 points)
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    default:
+                        options = '';
+                }
+                return options;
+            }
+
+            // Event listener for SAP type selection
+            $('#sapType').change(function () {
+                var selectedSAP = $(this).val();
+                var eventOptions = generateEventOptions(selectedSAP);
+
+                $('#eventOptions').html(eventOptions);
+            });
+
+            // Add file input field when "Add File" button is clicked
+            $('#addFileBtn').click(function () {
+                $('#fileInputs').append('<input type="file" class="form-control" name="proofFile[]" multiple><br><br>');
+            });
+        });
+    </script>
+</body>
+</html>

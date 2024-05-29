@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <script src="run.js"></script>
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="navbar">
+            <a href="http://localhost:3000">Add SAP</a>
+            <a href="#" onclick="showForm('view')">View SAP</a>
+            <a href="#" onclick="showForm('reference')">Reference</a>
+            <a href="../login.html">Log out</a>
+        </div>
+
+        <section id="addForm">
+            <h2>Add SAP</h2>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Department">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="viewForm">
+            <h2>View SAP</h2>
+            <div id="sapTables">
+                <iframe src="http://localhost:2000" frameborder="0" id="refs"></iframe>
+            </div>
+        </section>
+
+        <section id="referenceForm">
+            <div id="ref">
+                    <iframe src="reference.html" frameborder="0" id="refs"></iframe>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function showForm(formName) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected form
+            document.getElementById(formName + 'Form').style.display = 'block';
+        }
+
+        function fetchSAP() {
+            var semester = document.getElementById('semester').value;
+            var sapTables = document.getElementById('sapTables');
+
+            // Clear previous SAP tables
+            sapTables.innerHTML = '';
+
+            if (semester === 'all') {
+                // Display SAP for all semesters
+                for (var i = 1; i <= 8; i++) {
+                    var table = document.createElement('table');
+                    var header = table.createTHead();
+                    var row = header.insertRow();
+                    row.innerHTML = '<th>S.No</th><th>Semester Number</th><th>College Name</th><th>Event Name</th><th>Level</th><th>Winner</th><th>Points</th>';
+                    var body = table.createTBody();
+                    // Fetch SAP data for semester i and populate the table
+                    // Replace this with your actual data fetching logic
+                    // For demonstration purpose, adding dummy data
+                    for (var j = 1; j <= 5; j++) {
+                        var rowData = [j, 'Semester ' + i, 'College ' + j, 'Event ' + j, 'Inside', 'Yes', '10'];
+                        var row = body.insertRow();
+                        for (var k = 0; k < rowData.length; k++) {
+                            var cell = row.insertCell();
+                            cell.appendChild(document.createTextNode(rowData[k]));
+                        }
+                    }
+                    sapTables.appendChild(table);
+                }
+            } else {
+                // Fetch SAP data for the selected semester and display it in a single table
+                // Replace this with your actual data fetching logic
+                // For demonstration purpose, adding dummy data
+                var table = document.createElement('table');
+                var header = table.createTHead();
+                var row = header.insertRow();
+                row.innerHTML = '<th>S.No</th><th>Semester Number</th><th>College Name</th><th>Event Name</th><th>Level</th><th>Winner</th><th>Points</th>';
+                var body = table.createTBody();
+                for (var i = 1; i <= 5; i++) {
+                    var rowData = [i, 'Semester ' + semester, 'College ' + i, 'Event ' + i, 'Inside', 'Yes', '10'];
+                    var row = body.insertRow();
+                    for (var j = 0; j < rowData.length; j++) {
+                        var cell = row.insertCell();
+                        cell.appendChild(document.createTextNode(rowData[j]));
+                    }
+                }
+                sapTables.appendChild(table);
+            }
+        }
+    </script>
+    <style>
+        :root{
+            --bg:#00203FFF;
+            --gg:#4793AF;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--gg);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+
+            display: flex;
+            flex-direction: row;
+            margin-top: 200px;
+            z-index: 0;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 200px;
+            gap: 20px;
+            z-index: 999;
+        }
+
+        .navbar a {
+            color: #fff;
+            background-color: var(--bg);
+            text-decoration: none;
+            border: 2px solid #1879ff;
+            border-radius: 10px;
+            font-size: 25px;
+            width:150px;
+            text-align: center;
+            padding:10px 20px;
+            margin: 0 10px;
+        }
+        .main{
+            position: relative;
+            margin-left: 100px;
+        }
+
+        iframe#refs{
+            width: 1200px;
+            height: 70vh;
+            overflow: visible;
+        }
+        section {
+            padding: 20px;
+            display: none;
+            position: relative;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            max-width: 600px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px var(--gg);
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: var(--gg);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</body>
+
+</html>

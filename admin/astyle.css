@@ -1,0 +1,231 @@
+:root {
+    --bg: #00203F;
+    --bgg: #064b90;
+    --gg: #4793AF;
+    --gga: #155d78;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--bg);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: -50px;
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 45%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.left button,
+.right button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--gg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.left button {
+    width: 100%;
+}
+
+.left button:hover,
+.right button:hover {
+    background-color: var(--gga);
+}
+
+.right form {
+    display: none;
+}
+
+.right button {
+    width: 50%;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--gg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--gga);
+}
+
+/* Styles for the Add Student form */
+#form_add_student {
+    display: none;
+}
+
+#form_add_student h2 {
+    margin-bottom: 20px;
+}
+
+#form_add_student .form-group {
+    margin-bottom: 20px;
+}
+
+#form_add_student label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#form_add_student input[type="text"],
+#form_add_student input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form_add_student .form-group.department-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+#form_add_student .form-group.year-semester {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#form_add_student button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form_add_student button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styles for the Update Student form */
+#form_update_student {
+    display: none;
+}
+
+#form_update_student h2 {
+    margin-bottom: 20px;
+}
+
+#form_update_student .form-group {
+    margin-bottom: 20px;
+}
+
+#form_update_student label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#form_update_student input[type="text"],
+#form_update_student input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form_update_student .form-group.department-section {
+    display: flex;
+    column-gap: 10px;
+}
+
+#form_update_student .form-group.department-section input[type="text"] {
+    width: calc(50% - 10px);
+}
+
+#form_update_student .form-group.year-semester {
+    display: flex;
+}
+
+#form_update_student .form-group.year-semester input[type="number"] {
+    width: calc(50% - 10px);
+}
+
+#form_update_student button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form_update_student button[type="submit"]:hover {
+    background-color: #45a049;
+}

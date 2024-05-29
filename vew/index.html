@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Table</title>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #ddd;
+    }
+    .action-buttons {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<table id="eventTable">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Roll No</th>
+            <th>Event Type</th>
+            <th>Event Option</th>
+            <th>Points</th>
+            <th>Image Name</th>
+            <th>Institution Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows will be populated dynamically -->
+    </tbody>
+</table>
+
+<script>
+    // Fetch data from server and populate the table
+    fetch('/').then(response => response.json()).then(data => {
+        const tableBody = document.querySelector('#eventTable tbody');
+        data.events.forEach((event, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${event.rollno}</td>
+                <td>${event.eventType}</td>
+                <td>${event.eventOption}</td>
+                <td>${event.points}</td>
+                <td>${event.imageName.join(', ')}</td>
+                <td>${event.institutionName}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }).catch(error => {
+        console.error('Error fetching data:', error);
+    });
+</script>
+
+</body>
+</html>

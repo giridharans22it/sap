@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisor Dashboard</title>
+    <link rel="stylesheet" href="dstyle.css">
+    <script src="dscript.js"></script>
+</head>
+
+<body>
+    <center><h1>Advisor Page</h1></center>
+
+    <div id="buttons">
+        <button onclick="showForm('addStudentForm')">Add Student</button>
+        <button onclick="showForm('viewStudentForm')">View Student</button>
+        <button onclick="showForm('deleteStudentForm')">Delete Student</button>
+        <button onclick="showForm('updateStudentForm')">Update Student</button>
+    </div>
+
+    <div id="addStudentForm" style="display:none;">
+        <h2>Add Student</h2>
+        <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId">
+        </div>
+        <div class="form-group">
+            <label for="pass">Password</label>
+            <input type="password" id="pass">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="number" id="year">
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" id="department">
+        </div>
+        <div class="form-group">
+            <label for="section">Section</label>
+            <input type="text" id="section">
+        </div>
+        <div class="form-group">
+            <label for="semester">Semester</label>
+            <input type="number" id="semester">
+        </div>
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <div id="viewStudentForm" style="display:none;">
+        <h2>View Student</h2>
+        <div class="form-group">
+            <label for="viewStudentId">Student ID</label>
+            <input type="text" id="viewStudentId">
+        </div>
+        <button onclick="viewStudent()">View Student</button>
+    </div>
+
+    <div id="deleteStudentForm" style="display:none;">
+        <h2>Delete Student</h2>
+        <div class="form-group">
+            <label for="deleteStudentId">Student ID</label>
+            <input type="text" id="deleteStudentId">
+        </div>
+        <button onclick="deleteStudent()">Delete Student</button>
+    </div>
+
+    <div id="updateStudentForm" style="display:none;">
+        <h2>Update Student</h2>
+        <div class="form-group">
+            <label for="updateStudentId">Student ID</label>
+            <input type="text" id="updateStudentId" placeholder="Enter Student ID">
+            <button onclick="getStudentDetails()">Get Details</button>
+        </div>
+        <div id="updateForm" style="display:none;">
+            <div class="form-group">
+                <label for="updateName">Name</label>
+                <input type="text" id="updateName" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" id="pass">
+            </div>
+            <div class="form-group">
+                <label for="updateYear">Year</label>
+                <input type="number" id="updateYear" placeholder="Enter Year">
+            </div>
+            <div class="form-group">
+                <label for="updateDepartment">Department</label>
+                <input type="text" id="updateDepartment" placeholder="Enter Department">
+            </div>
+            <div class="form-group">
+                <label for="updateSection">Section</label>
+                <input type="text" id="updateSection" placeholder="Enter Section">
+            </div>
+            <div class="form-group">
+                <label for="updateSemester">Semester</label>
+                <input type="number" id="updateSemester" placeholder="Enter Semester">
+            </div>
+            <button onclick="updateStudent()">Update Student</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
